@@ -1,0 +1,50 @@
+    1  ls
+    2  passwd sunidhisp24
+    3  passwd
+    4  exit
+    5  ls
+    6  pwd
+    7  wget www.github.com
+    8  ls
+    9  git - version
+   10  git -version
+   11  git --version
+   12  mkdir cs131
+   13  cd cs131
+   14  pwd
+   15  git init
+   16  git branch -m main
+   17  git branch -a
+   18  touch newtextfile.txt
+   19  ls
+   20  git status
+   21  git add newtextfile.txt
+   22  git status
+   23  git commit -m "first commit"
+   24  git config --global user.email "sunidhithakker@gmail.com"
+   25  git config --global user.name "sunidhi"
+   26  git commit -m "first commit"
+   27  git checkout -b new_branch
+   28  git branch
+   29  git checkout main
+   30  git branch
+   31  git remote add origin https://github.com/sunidhithakker/cs131.git
+   32  git push -u origin main
+   33  git push origin new_branch
+   34  git branch
+   35  git checkout new_branch 
+   36  touch anotherfile.txt
+   37  ls
+   38  git status
+   39  git add .
+   40  git commit -m "new file to branch"
+   41  git push origin new_branch
+   42  git branch main
+   43  git checkout main
+   44  git pull origin main
+   45  git log
+   46  ls
+   47  mkdir Worksheet1
+   48  pwd
+   49  cd Worksheet1/
+   50  history > cmds.log
