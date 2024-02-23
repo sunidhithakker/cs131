@@ -1,0 +1,117 @@
+    1  ls
+    2  passwd sunidhisp24
+    3  passwd
+    4  exit
+    5  ls
+    6  pwd
+    7  wget www.github.com
+    8  ls
+    9  git - version
+   10  git -version
+   11  git --version
+   12  mkdir cs131
+   13  cd cs131
+   14  pwd
+   15  git init
+   16  git branch -m main
+   17  git branch -a
+   18  touch newtextfile.txt
+   19  ls
+   20  git status
+   21  git add newtextfile.txt
+   22  git status
+   23  git commit -m "first commit"
+   24  git config --global user.email "sunidhithakker@gmail.com"
+   25  git config --global user.name "sunidhi"
+   26  git commit -m "first commit"
+   27  git checkout -b new_branch
+   28  git branch
+   29  git checkout main
+   30  git branch
+   31  git remote add origin https://github.com/sunidhithakker/cs131.git
+   32  git push -u origin main
+   33  git push origin new_branch
+   34  git branch
+   35  git checkout new_branch 
+   36  touch anotherfile.txt
+   37  ls
+   38  git status
+   39  git add .
+   40  git commit -m "new file to branch"
+   41  git push origin new_branch
+   42  git branch main
+   43  git checkout main
+   44  git pull origin main
+   45  git log
+   46  ls
+   47  mkdir Worksheet1
+   48  pwd
+   49  cd Worksheet1/
+   50  history > cmds.log
+   51  ls
+   52  cat cmds.log
+   53  git status
+   54  git branch
+   55  git add .
+   56  git status
+   57  git commit -m "Worksheet1 history log"
+   58  git push origin main
+   59  exit
+   60  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/spotify-2023.csv
+   61  ls
+   62  nano spotify-2023.csv 
+   63  head spotify-2023.csv 
+   64  vi spotify-2023.csv 
+   65  exit
+   66  pwd
+   67  echo $HOME
+   68  printenv
+   69  name() echo "CS131";}
+   70  name() { echo "CS131";}
+   71  export -f name
+   72  name
+   73  ls
+   74  grep "Taylor Swift" spotify-2023.csv > taylorAndDrake.txt
+   75  cat taylorAndDrake.txt 
+   76  grep "Drake" spotify-2023.csv >> taylorAndDrake.txt 
+   77  cat taylorAndDrake.txt 
+   78  wc -l taylorAndDrake.txt 
+   79  exit
+   80  cat etc/passwd
+   81  ls
+   82  cd $HOME
+   83  ls
+   84  cat /etc/passwd
+   85  cat /etc/shadow
+   86  sudo cat /etc/shadow
+   87  cat /mnt/scratch/FA23_CS131_Ashish/ashish/a.txt
+   88  exit
+   89  ls
+   90  cd cs131/
+   91  ls
+   92  mkdir Worksheet2
+   93  cd Worksheet2
+   94  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+   95  ls
+   96  cat 'Global YouTube Statistics.csv' 
+   97  head 'Global YouTube Statistics.csv' 
+   98  grep "United States" 'Global YouTube Statistics.csv' > unitedStatesYoutubers
+   99  ls
+  100  head unitedStatesYoutubers 
+  101  grep -w 'Music' 'Global YouTube Statistics.csv' | grep -v ',[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*$'
+  102  grep '[^,]*,[^,]*,[^,]*,[^,]*,Music,*' 'Global YouTube Statistics.csv' 
+  103  grep '^[^,]*,[^,]*,[^,]*,[^,]*,Music,*' 'Global YouTube Statistics.csv' 
+  104  grep '^[^,]*,[^,]*,[^,]*,[^,]*,Music,*' 'Global YouTube Statistics.csv' > musicCategory
+  105  ls
+  106  rm unitedStatesYoutubers 
+  107  ls
+  108  grep '^[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,United States,*' 'Global YouTube Statistics.csv'
+  109  grep '^[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,United States,*' 'Global YouTube Statistics.csv' > unitedStatesYoutubers
+  110  ls
+  111  wc -lw musicCategory 
+  112  wc musicCategory 
+  113  wc -lw musicCategory > counts.txt
+  114  cat counts.txt 
+  115  vi counts.txt 
+  116  cat counts.txt 
+  117  history > cmds.log

@@ -1,0 +1,1 @@
+  196 is the line count.  654 is the word count for the file musicCategory.
