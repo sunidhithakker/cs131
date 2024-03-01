@@ -1,0 +1,45 @@
+2. Output of shell
+/bin/bash
+
+2.2 Output of home
+/mnt/scratch/FA23_CS131_Ashish/sunidhisp24
+
+3. UID, groups output
+uid=1180(sunidhisp24) gid=1180(sunidhisp24) groups=1180(sunidhisp24),77(S77)
+
+4. Permissions for myDir before modifying
+total 8
+-rw-rw-r-- 1 sunidhisp24 sunidhisp24  130 Feb 29 18:44 Assignment1.txt
+drwxrwxr-x 2 sunidhisp24 sunidhisp24 4096 Feb 29 18:44 myDir
+
+4. Permissions for myDir after modifying
+total 8
+-rw-rw-r-- 1 sunidhisp24 sunidhisp24  270 Feb 29 18:44 Assignment1.txt
+dr-xrwxr-x 2 sunidhisp24 sunidhisp24 4096 Feb 29 18:44 myDir
+
+6. Memory displayed in mebibytes
+              total        used        free      shared  buff/cache   available
+Mem:          71367       33058       19010        3556       19298       33294
+Swap:          4119           0        4119
+
+9. OS Version
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.6"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.6 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/red_hat_enterprise_linux/8/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.6"
+
+10. Permissions for file containing OS version information
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release

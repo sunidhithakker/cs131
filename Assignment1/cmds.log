@@ -1,0 +1,139 @@
+Script started on 2024-02-29 18:42:35-05:00
+(edited to avoid confusing keystrokes)
+
+
+1. Make directory and change into it
+bash-4.4$ mkdir Assignment1
+bash-4.4$ cs Assignment1
+bash: cs: command not found
+bash-4.4$ cd Assignment1
+
+
+2. Echo current shell
+bash-4.4$ echo $SHELL
+/bin/bash
+bash-4.4$ echo $SHELL > Assignment1.txt
+bash-4.4$ cat Assignment1.txt 
+/bin/bash
+bash-4.4$ 
+
+
+2.2 Echo home directory
+bash-4.4$ echo $HOME
+/mnt/scratch/FA23_CS131_Ashish/sunidhisp24
+bash-4.4$ echo $HOME >> Assignment1.txt
+
+
+3. User ID, groups
+bash-4.4$ id sunidhisp24
+uid=1180(sunidhisp24) gid=1180(sunidhisp24) groups=1180(sunidhisp24),77(S77)
+bash-4.4$ id sunidhisp24 >> Assignment1.txt
+
+
+4. Create new directory myDir 
+bash-4.4$ mkdir myDir
+
+
+4. Viewing current permissions
+bash-4.4$ ls -l
+total 8
+-rw-rw-r-- 1 sunidhisp24 sunidhisp24  130 Feb 29 18:44 Assignment1.txt
+drwxrwxr-x 2 sunidhisp24 sunidhisp24 4096 Feb 29 18:44 myDir
+bash-4.4$ ls -l >> Assignment1.txt
+
+
+4. Changing write permission for myself 
+bash-4.4$ chmod u-w myDir
+bash-4.4$ ls -l
+total 8
+-rw-rw-r-- 1 sunidhisp24 sunidhisp24  270 Feb 29 18:44 Assignment1.txt
+dr-xrwxr-x 2 sunidhisp24 sunidhisp24 4096 Feb 29 18:44 myDir
+bash-4.4$ ls -l >> Assignment1.txt 
+
+
+4. Able to cd into the directory
+bash-4.4$ cd myDir
+
+
+bash-4.4$ ls myDir
+ls: cannot access 'myDir': No such file or directory
+
+
+4. Able to ls into the directory, used ls -l to see some output
+bash-4.4$ ls
+bash-4.4$ ls -l
+total 0
+
+
+4. Cannot create files under the directory
+bash-4.4$ touch file.txt
+touch: cannot touch 'file.txt': Permission denied
+bash-4.4$ cd ..
+bash-4.4$ ls
+Assignment1.txt  myDir
+
+
+5. Create myDir2 and myDir3
+bash-4.4$ mkdir myDir2
+bash-4.4$ mkdir myDir3
+
+
+6. Create myFile.txt in myDir2
+bash-4.4$ cd myDir2
+bash-4.4$ touch myFile.txt
+bash-4.4$ ls
+myFile.txt
+bash-4.4$ pwd
+/mnt/scratch/FA23_CS131_Ashish/sunidhisp24/cs131/Assignment1/myDir2
+
+
+6. Moving myFile from myDir2 to myDir3
+bash-4.4$ mv /mnt/scratch/FA23_CS131_Ashish/sunidhisp24/cs131/Assignment1/myDir2/myFile.txt /mnt/scratch/FA23_CS131_Ashish/sunidhisp24/cs131/Assignment1/myDir3
+bash-4.4$ ls
+bash-4.4$ cd ..
+bash-4.4$ cd myDir3
+bash-4.4$ ls
+myFile.txt
+bash-4.4$ cd ..
+bash-4.4$ ls
+Assignment1.txt  myDir	myDir2	myDir3
+
+
+6.6 Find total amount of RAM/memory using free command, display in mebibytes
+bash-4.4$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:          71367       33058       19010        3556       19298       33294
+Swap:          4119           0        4119
+bash-4.4$ free -m >> Assignment1.txt 
+
+
+9. Identify OS version, in /etc/os-release file
+bash-4.4$ cat /etc/os-release
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.6"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.6 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/red_hat_enterprise_linux/8/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.6"
+bash-4.4$ cat /etc/os-release >> Assignment1.txt
+
+
+10. See permissions for the file containing OS version information 
+bash-4.4$ ls -l /etc/os-release
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release
+bash-4.4$ ls -l /etc/os-release >> Assignment1.txt 
+bash-4.4$ exit
+exit
+
+Script done on 2024-02-29 18:48:41-05:00
