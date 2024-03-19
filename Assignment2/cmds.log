@@ -1,0 +1,80 @@
+  History file truncated to only focus on Assignment 2 commands
+  
+  336  ls
+  337  cd cs131
+  338  mkdir Assignment2
+  339  cd Assignment2
+
+1. Executing find command
+  340  find /etc -type f > one.txt 2> two.txt
+
+  341  cat one.txt 
+  342  cat two.txt 
+  361  cd ..
+  362  cd Worksheet2
+  363  ls
+  364  cp 'Global YouTube Statistics.csv' /cs131/Assignment2
+  365  cd ..
+  366  cd Assignment
+  367  cd Assignment2
+  368  pwd
+  369  cd ..
+  370  cd Worksheet2
+  371  cp 'Global YouTube Statistics.csv' /mnt/scratch/FA23_CS131_Ashish/sunidhisp24/cs131/Assignment2
+  372  cd ..
+  373  cd Assignment2
+  374  ls
+  375  cat one.txt > Assignment2.txt
+  376  cat two.txt >> Assignment2.txt
+  377  vi Assignment2.txt 
+  378  head -1 'Global YouTube Statistics.csv' 
+  382  sort 'Global YouTube Statistics.csv' | uniq -c
+  383  sort 'Global YouTube Statistics.csv' | uniq -cd
+  384  head -1 'Global YouTube Statistics.csv' 
+  385  cut -d ',' -f 21,22 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3
+  386  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3
+  387  cut -d ',' -f 20,21 'Global YouTube Statistics.csv'
+  388  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3
+  389  cut -d ',' -f 21,22 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3
+  390  cut -d ',' -f 21,22 'Global YouTube Statistics.csv' | sort | uniq -cd | head -n 3
+  391  cut -d ',' -f 21,22 'Global YouTube Statistics.csv'
+  392  cut -d ',' -f 21,22 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3
+  393  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3
+  394  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | head -n 3
+  395  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3
+  396  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr 
+  397  ls
+  398  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c
+
+2. Command used to find [Month, Year] that had most YouTube channels created
+  399  cut -d ',' -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort -nr | head -n 3 >> Assignment2.txt
+ 
+  400  vi Assignment2.txt 
+
+3. Command used to find all processes owned by me, used tee to print to terminal as well as Assignment2.txt
+  401  ps -u sunidhisp24 | tee -a Assignment2.txt
+
+4.a Opening a file in vi
+  403  vi file.txt
+  404  cd cs131/Assignment2
+  405  ls
+
+4.b Command used to find all processes owned by me after opening file in vi
+  406  ps -u sunidhisp24 | tee -a Assignment2.txt 
+
+  407  tail Assignment2.txt
+
+4.d Command used to find all processes owned by me after closing file in vi  
+  408  ps -u sunidhisp24 | tee -a Assignment2.txt 
+ 
+  409  ps -p 1
+  410  ps -p 1 >> Assignment2.txt 
+  411  cd cs131/Assignment2/
+  412  ls
+  413  ps aux | grep "systemd"
+
+5. Command used to find init process in Linux. The process ID of the init process is 1.  
+  414  ps aux | grep "systemd" | head -1
+
+  415  ps aux | grep "systemd" | head -1 >> Assignment2.txt
+  416  history > cmds.log
