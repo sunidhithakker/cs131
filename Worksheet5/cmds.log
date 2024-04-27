@@ -1,0 +1,62 @@
+Script started on 2024-04-26 22:28:58-04:00
+bash-4.4$ wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+--2024-04-26 22:29:12--  https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.111.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 200279 (196K) [text/plain]
+Saving to: ‘Global YouTube Statistics.csv’
+
+Global YouTube Statistics.csv       0%[                                                           ]       0  --.-KB/s               Global YouTube Statistics.csv     100%[==========================================================>] 195.58K  --.-KB/s    in 0.009s  
+
+2024-04-26 22:29:12 (21.2 MB/s) - ‘Global YouTube Statistics.csv’ saved [200279/200279]
+
+bash-4.4$ mkdir United_States
+bash-4.4$ ls
+ cmds.log  'Global YouTube Statistics.csv'   script.sh	 United_States
+bash-4.4$ cat script.sh 
+#!/bin/bash
+IFS=$'\r\n'
+lines=$(awk -F ',' '$8 == "United States" {print}' 'Global YouTube Statistics.csv')
+for i in $lines
+do
+        category=$(echo "$i" | awk -F ',' '{print $5}')
+        case $category in
+                Music)
+                        echo $i >> United_States/Music.txt
+                        ;;
+                Entertainment)
+                        echo $i >> United_States/Entertainment.txt
+                        ;;
+                Gaming)
+                        echo $i >> United_States/Gaming.txt
+                        ;;
+                Comedy)
+                        echo $i >> United_States/Comedy.txt
+                        ;;
+                *)
+                        ;;
+        esac
+done
+
+bash-4.4$ bash script.sh 
+bash-4.4$ cd United_States/
+bash-4.4$ ls
+Comedy.txt  Entertainment.txt  Gaming.txt  Music.txt
+bash-4.4$ touch ws5.txt
+bash-4.4$ cat Music.txt | wc -l
+73
+bash-4.4$ cat Music.txt | wc -l >> ws5.txt 
+bash-4.4$ cat Entertainment.txt | wc -l
+68
+bash-4.4$ cat Entertainment.txt | wc -l >> ws5.txt 
+bash-4.4$ cat Gaming.txt | wc -l
+26
+bash-4.4$ cat Gaming.txt | wc -l >> ws5.txt 
+bash-4.4$ cat Comedy.txt | wc -l
+22
+bash-4.4$ cat Comedy.txt | wc -l >> ws5.txt 
+bash-4.4$ exit
+exit
+
+Script done on 2024-04-26 22:31:11-04:00
